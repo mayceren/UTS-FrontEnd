@@ -172,11 +172,11 @@ Links.forEach(link => {
 
 /* FITUR PENCARIAN */
 const files = [
-    { name: "Bali", url: "contoh.html" },
-    { name: "Bandung", url: "contoh.html" },
-    { name: "Jakarta", url: "jakarta.html" },
-    { name: "Raja Ampat", url: "itinerary.html" },
-    { name: "Yogyakarta", url: "hidden-gem.html" },
+    { name: "Bali", url: "Bali.html" },
+    { name: "Bandung", url: "Bandung.html" },
+    { name: "Jakarta", url: "Jakarta.html" },
+    { name: "Raja Ampat", url: "RajaAmpat.html" },
+    { name: "Yogyakarta", url: "Yogyakarta.html" },
 ];
 
 function searchAndRedirect() {

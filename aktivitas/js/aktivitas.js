@@ -103,7 +103,7 @@ for (let i = 0; i < tabHeaderNodes.length; i++) {
     })
 }
 
-/*SWAIPER*/
+/*SWIPER*/
 new Swiper('.card-wrapper', {
   loop: true,
   spaceBetween: 30,

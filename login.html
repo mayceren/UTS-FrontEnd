@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="login\login.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="background"></div>
+    <div class="container">
+      <div class="content">
+        <h2 class="logo">LuxeVoyage</h2>
+
+        <div class="text-sci">
+          <h2>
+            Selamat Datang! <br />
+            <span>To your journey</span>
+          </h2>
+
+          <p>
+            Telusuri tempat wisata berserta
+            aktivitas yang menarik disana!
+          </p>
+        </div>
+      </div>
+      <div class="logreg-box">
+        <div class="form-box login">
+          <form id="loginForm" action="#">
+            <h2>Masuk</h2>
+
+            <div class="input-box">
+              <span class="icon"><i class="bx bxs-envelope"></i></span>
+              <input type="email" id="email" required />
+              <label>Email</label>
+            </div>
+
+            <div class="input-box">
+              <span class="icon"><i class="bx bxs-lock-alt"></i></span>
+              <input type="password" id="password" required />
+              <label>Kata sandi</label>
+            </div>
+
+            <button type="submit" class="btn">MASUK</button>
+
+            <div class="login-register">
+              <p>
+                Belum memiliki akun?<a href="#" class="register-link">Daftar</a>
+              </p>
+            </div>
+          </form>
+        </div>
+        <div class="form-box register">
+          <form id="registerForm" action="#">
+            <h2>Daftar</h2>
+            
+            <div class="input-box">
+              <span class="icon"><i class='bx bxs-user' ></i></span>
+              <input type="text" id="nama" required />
+              <label>Nama</label>
+            </div>
+
+            <div class="input-box">
+              <span class="icon"><i class="bx bxs-envelope"></i></span>
+              <input type="email" id="email" required />
+              <label>Email</label>
+            </div>
+
+            <div class="input-box">
+              <span class="icon"><i class="bx bxs-lock-alt"></i></span>
+              <input type="password" id="password" required />
+              <label>Kata sandi</label>
+            </div>
+
+            <button type="submit" class="btn">DAFTAR</button>
+
+            <div class="login-register">
+              <p>
+                Sudah memiliki akun?<a href="#" class="login-link">Daftar</a>
+              </p>
+            </div>
+      </div>
+    </div>
+
+    <script src="login\js\login.js"></script>
+  </body>
+</html>

@@ -87,6 +87,7 @@ section.home {
   display: flex;
   align-items: center;
   gap: 1rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.99);
 }
 
 .home .home-box nav .logo .bar {
@@ -207,7 +208,7 @@ section.home {
 /* thumbnail */
 .thumbnail{
   position: absolute;
-  bottom: 50px;
+  bottom: 10px;
   left: 50%;
   width: max-content;
   z-index: 999;
@@ -451,11 +452,11 @@ section.home {
 
 .tabs {
   position: relative;
-  top:88%;
+  top: 88%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 90rem;
-  height:80rem;
+  width: 100%;
+  height: 80rem;
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
@@ -507,9 +508,10 @@ section.home {
   margin-top: 10px;
   border-radius: 10px;
   color: #02636e;
+  box-sizing: border-box;
 }
 .tabs .tab-body > div {
-  position: absolute;
+  position: relative;
   opacity: 0;
   top: 100%;
   transform: translateY(-10px);
@@ -519,6 +521,7 @@ section.home {
   transform: translateY(0px);
   top: 30px;
   opacity: 1;
+  width: 100%;
 }
 .tabs .tab-body h1 {
   color: #222;
@@ -533,12 +536,16 @@ section.home {
   color: #555;
   font-size: 15px;
   margin-bottom: 22px;
+  width: 100%;
+  word-wrap: break-word;
+  padding-right: 1rem;
 }
 
 /* CARD */
 .card_container{
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .card {
@@ -689,103 +696,6 @@ section.home {
     margin-top: -35px;
 }
 
-@media screen and (max-width: 768px) {
-    .card-wrapper {
-        margin: 0 10px 25px;
-    }
-
-    .card-wrapper .swiper-slide-button {
-        display: none;
-    }
-}
-
-.card-wrapper {
-  max-width: 1100px;
-  margin: 0 60px 35px;
-  padding: 20px 10px;
-  overflow: hidden;
-}
-
-.card-list .card-item {
-  list-style: none;   
-}
-
-.card-list .card-item .card-link {
-  user-select: none;
-  display: block;
-  background: #fff;
-  padding: 18px;
-  border-radius: 12px;
-  text-decoration: none;
-  border: 2px solid transparent;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
-}
-
-.card-list .card-item .card-link:active {
-  cursor: grabbing;
-} 
-
-.card-list .card-item .card-link:hover {
-  border-color: #5372F0;
-}
-
-.card-list .card-link .card-image {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-.card-list .card-link .badge {
-  color: #5372F0;
-  padding: 8px 16px;
-  font-size: 0.95rem;
-  font-weight: 500;
-  margin: 16px 0 18px;
-  background: #DDE4FF;
-  width: fit-content;
-  border-radius: 50px;
-}
-
-.card-list .card-link .card-title {
-  font-size: 1.19rem;
-  color: #000;
-  font-weight: 600;
-}
-
-.card-list .card-link .card-button {
-  height: 35px;
-  width: 35px;
-  color: #5372F0;
-  border-radius: 50%;
-  margin: 30px 0 5px;
-  background: none;
-  cursor: pointer;
-  border: 2px solid #5372F0;
-  transform: rotate(-45deg);
-  transition: 0.4s ease;
-}
-
-.card-list .card-link:hover .card-button {
-  color: #fff;
-  background: #5372F0;
-}
-
-.card-wrapper .swiper-pagination-bullet {
-  height: 13px;
-  width: 13px;
-  opacity: 0.5;
-  background: #5372F0;
-}
-
-.card-wrapper .swiper-pagination-bullet-active {
-  opacity: 1;
-}
-
-.card-wrapper .swiper-slide-button {
-  color: #5372F0;
-  margin-top: -35px;
-}
 
 @media screen and (max-width: 768px) {
   .card-wrapper {
@@ -793,8 +703,37 @@ section.home {
   }
 
   .card-wrapper .swiper-slide-button {
-      display: none;
+      display: block;
   }
+  .judul {
+    text-align: center;
+  }
+
+  .tabs {
+    top: 110%;
+    width: 125%;
+    height: 100rem;
+  }
+  .tab-body {
+    width: 100%;
+    box-sizing: border-box;
+    overflow: visible;
+  }
+
+  .tab-body .active p {
+    width: 100%;
+    text-align: justify;
+    margin: 0;
+    padding-right: 3rem;
+  }
+}
+
+@media screen and (max-width: 1022px){
+  .tabs {
+    top: 120%;
+    height: 110rem;
+  }
+  
 }
 /*=============== BREAKPOINTS ===============*/
 @media screen and (max-width: 678px) {
@@ -805,7 +744,19 @@ section.home {
   .slider .list .item .detail .desc{
   font-size: 0.8rem;
   }
+  .judul h1 {
+    text-align: center;
+    margin-top: 10px;
+  }
+  .container.swiper{
+    top: 40px;
+  }
+  .tabs {
+    top: 133%;
+    height: 113rem;
+  }
 }
+
 @media screen and (min-width: 1023px) {
   .nav__toggle {
     display: none;
@@ -823,5 +774,130 @@ section.home {
 
   .nav {
     height: calc(var(--header-height) + 1.5rem);
+  }
+}
+
+/*-----------------*/
+/* Default Styles (Mobile-first) */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.header {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__list {
+  display: none;
+}
+
+.nav__toggle {
+  display: block;
+  cursor: pointer;
+}
+
+.detail {
+  margin-top: 20px;
+}
+
+.detail .name {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.detail .desc {
+  font-size: 16px;
+  color: #555;
+}
+
+.slider {
+  margin-top: 30px;
+}
+
+/* Media Query untuk layar mobile dan tablet (max-width: 678px) */
+@media screen and (max-width: 678px) {
+  .header {
+      padding: 15px 0;
+  }
+  
+  .nav__list {
+      display: block;
+      text-align: center;
+      margin-top: 10px;
+  }
+  
+  .nav__item {
+      display: block;
+      margin: 10px 0;
+  }
+  
+  .detail .name {
+      font-size: 20px;
+  }
+
+  .detail .desc {
+      font-size: 14px;
+  }
+
+  .slider {
+      margin-top: 20px;
+  }
+}
+
+/* Media Query untuk layar yang lebih besar (min-width: 1023px) */
+@media screen and (min-width: 1023px) {
+  .nav {
+      justify-content: flex-start;
+  }
+
+  .nav__list {
+      display: flex;
+  }
+
+  .nav__toggle {
+      display: none;
+  }
+
+  .nav__item {
+      margin-left: 20px;
+      display: inline-block;
+  }
+
+  .container {
+      max-width: 960px;
+  }
+  .tabs {
+    top: 108%;
+    height: 100rem;
+  }
+}
+
+/* Media Query untuk layar desktop besar (min-width: 1152px) */
+@media screen and (min-width: 1152px) {
+  .container {
+      max-width: 1140px;
+  }
+  
+  .detail .name {
+      font-size: 28px;
+  }
+
+  .detail .desc {
+      font-size: 18px;
   }
 }

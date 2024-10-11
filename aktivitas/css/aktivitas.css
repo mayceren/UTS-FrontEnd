@@ -450,7 +450,7 @@ section.home {
 
 .tabs {
   position: relative;
-  top:70%;
+  top:90%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 90rem;
@@ -467,7 +467,6 @@ section.home {
 }
 .tabs .tab-header {
   background: #f5f5f5;
-  margin-top: 100px;
   padding: 10px;
   display: flex;
   justify-content: space-around;
